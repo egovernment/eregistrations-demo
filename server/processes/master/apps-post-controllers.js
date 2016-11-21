@@ -46,6 +46,11 @@ module.exports = {
 		null,
 		joinOptions
 	),
+	"apps/official-social-security": joinControllers(
+		require("../../../apps/official-social-security/controller"),
+		null,
+		joinOptions
+	),
 	"apps/official-front-desk": joinControllers(
 		require("../../../apps/official-front-desk/controller"),
 		null,
