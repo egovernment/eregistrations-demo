@@ -12,7 +12,7 @@ BusinessProcessDemo.prototype.processingSteps.map.defineProperties({
 BusinessProcessDemo.prototype.processingSteps.map.frontDesk.setProperties({
 	label: _("Front Desk"),
 	isApplicable: true,
-	previousSteps: function () { return [this.owner.socialSecurity]; }
+	previousSteps: function () { return [this.owner.processing]; }
 });
 
 module.exports = BusinessProcessDemo;
