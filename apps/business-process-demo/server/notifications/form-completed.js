@@ -4,6 +4,7 @@ var _                 = require('mano').i18n.bind('User: Notifications')
   , db                = require('../../../../db')
   , businessProcesses = db.BusinessProcessDemo.instances;
 
+exports.preTrigger    = businessProcesses.filterByKeyPath('guideProgress', 1);
 exports.trigger    = businessProcesses.filterByKeyPath('dataForms/progress', 1);
 
 exports.resolveGetters = true;
