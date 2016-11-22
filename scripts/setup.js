@@ -7,13 +7,12 @@ var deferred                   = require('deferred')
   , generateAppsClientProgram  = require('mano/scripts/generate-apps-client-program')
   , generateAppsClientCss      = require('mano/scripts/generate-apps-client-css')
   , generateClientEnv          = require('eregistrations/scripts/generate-client-env')
-  , cloudfrontInvalidate       = require('eregistrations/server/scripts/cloudfront-invalidate')
   , dbRecompute                = require('../server/scripts/db-recompute-in-sandbox')
   , generateDemoLegacyDbjsMock = require('./generate-business-process-demo-legacy-dbjs-mock')
   , generateFinalTestLegacyDbjsMock =
 		require('./generate-business-process-final-test-legacy-dbjs-mock')
   , i18nScan                   = require('./i18n-scan')
-  , env                        = require('../env')
+  , env                        = require('../server/env')
   , appsList                   = require('../server/apps/list')
 
   , root = resolve(__dirname, '..');
@@ -40,6 +39,7 @@ module.exports = function () {
 		// 8. Generate JS bundles (client-side programs)
 		!env.dev && generateAppsClientProgram.bind(null, root, appsList),
 		// 9. Invalidate Cloudfront (if configured)
-		env.cloudfront && cloudfrontInvalidate.bind(null, root, appsList, env.cloudfront)
+		env.cloudfront &&  require('eregistrations/server/scripts/cloudfront-invalidate')
+			.bind(null, root, appsList, env.cloudfront)
 	], function (ignore, next) { return next && next(); }, null);
 };

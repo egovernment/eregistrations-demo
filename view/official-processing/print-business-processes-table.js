@@ -1,7 +1,7 @@
 'use strict';
 
 var statusMap = require('../../apps/official-processing/business-processes/map')
-  , columns   = require('eregistrations/view/components/business-process-table-columns').columns;
+  , columns   = require('../components/business-process-table-columns').columns;
 
 var getOrderIndex =
 	require('../../apps/official-processing/business-processes/get-default-order-index');

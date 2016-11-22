@@ -10,7 +10,7 @@ Error.stackTraceLimit = Infinity;
 var DbjsEvent = require('dbjs/_setup/event')
   , recompute = require('eregistrations/server/scripts/db-recompute/slave');
 
-require('../env');
+require('../server/env');
 require('../i18n');
 
 DbjsEvent.stampZeroMode = true;

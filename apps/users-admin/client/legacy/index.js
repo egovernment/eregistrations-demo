@@ -7,6 +7,7 @@ require('mano-legacy/ie8-font-visibility-fix');
 
 window.$ = require('mano-legacy');
 
+require('mano-legacy/element#/class');
 require('mano-legacy/select-match');
 
 require('mano-legacy/element#/event');
