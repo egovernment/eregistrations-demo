@@ -11,6 +11,6 @@ var resolve  = require('path').resolve
   , generate = require('mano/scripts/generate-app-client-program');
 
 generate(resolve(__dirname, '..'), {
-	minify: (require('../../../env').minify !== false),
+	minify: (require('../../../server/env').minify !== false),
 	viewPath: require('../mano').viewPath
 }).done();
