@@ -30,7 +30,7 @@ module.exports = meta = Object.defineProperties({
 		label: _("Sent for corrections"),
 		order: 4
 	}
-}, { _services: d(['demo']) });
+}, { _services: d(['demo', 'finalTest']) });
 
 forEach(meta, function (conf, name) {
 	if (name === 'all') {
