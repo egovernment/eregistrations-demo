@@ -17,6 +17,8 @@ module.exports = {
 		new ControllerRouter(require('../../apps/official-social-security/server/routes')),
 	'official-front-desk':
 		new ControllerRouter(require('../../apps/official-front-desk/server/routes')),
+	playground:
+		new ControllerRouter(require('../../apps/playground/server/routes')),
 	user: new ControllerRouter(require('../../apps/user/server/routes')),
 	'users-admin': new ControllerRouter(require('../../apps/users-admin/server/routes'))
 };

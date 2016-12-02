@@ -11,6 +11,7 @@ module.exports = [
 	"apps/official-processing",
 	"apps/official-revision",
 	"apps/official-social-security",
+	"apps/playground",
 	"apps/public",
 	"apps/user",
 	"apps/users-admin"

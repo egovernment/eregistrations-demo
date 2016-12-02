@@ -34,6 +34,10 @@ module.exports = {
 		require("../../../apps/official-front-desk/controller"),
 		require("../../../apps/official-front-desk/controller/server")
 	),
+	"apps/playground": joinControllers(
+		require("../../../apps/playground/controller"),
+		require("../../../apps/playground/controller/server")
+	),
 	"apps/user": joinControllers(
 		require("../../../apps/user/controller"),
 		require("../../../apps/user/controller/server")
