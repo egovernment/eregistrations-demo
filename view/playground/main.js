@@ -6,9 +6,12 @@ exports._parent = require('../user-base');
 
 exports['sub-main'] = {
 	content: function () {
-		section({ class: "section-primary" },
-			h1(_("Sections playground")),
-			this.user.section.toDOMForm(document)
-			);
+		nav(ul({ class: 'pills-nav' },
+			li({ id: 'section-example-1', class: 'pills-nav-pill' },
+				a({ href: '/' }, _("Section example 1"))),
+			li({ id: 'section-example-2', class: 'pills-nav-pill' },
+				a({ href: '/section-example-2/' }, _("Section example 2")))
+			));
+		div({ id: 'main-content' });
 	}
 };
