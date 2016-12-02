@@ -15,6 +15,10 @@ User.prototype.defineProperties({
 	}
 });
 
+User.prototype.sectionGroup.setProperties({
+	actionUrl: 'section-example-2'
+});
+
 User.prototype.sectionGroup.sections.defineProperties({
 	personalInformation: { type: FormSection, nested: true },
 	addressDetails: { type: FormSection, nested: true }

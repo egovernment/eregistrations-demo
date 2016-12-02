@@ -9,7 +9,7 @@ FormSection.extend('GeneralInfoFormSection', {
 	// Section label
 	label: { value: "User information" },
 	// Form POST url
-	actionUrl: { value: 'general' },
+	actionUrl: { value: 'section-example-1' },
 	// Property names of all involved fields (order is significant)
 	propertyNames: { value: ['name', 'isNice', 'explainWhyNotNice',
 		'address/country', 'address/street'] }
