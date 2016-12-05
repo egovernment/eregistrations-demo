@@ -10,7 +10,9 @@ exports['sub-main'] = {
 			li({ id: 'section-example-1', class: 'pills-nav-pill' },
 				a({ href: '/' }, _("Section example 1"))),
 			li({ id: 'section-example-2', class: 'pills-nav-pill' },
-				a({ href: '/section-example-2/' }, _("Section example 2")))
+				a({ href: '/section-example-2/' }, _("Section example 2"))),
+			li({ id: 'section-example-3', class: 'pills-nav-pill' },
+					a({ href: '/section-example-3/' }, _("Section example 3")))
 			));
 		div({ id: 'main-content' });
 	}

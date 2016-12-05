@@ -22,3 +22,4 @@ if (!isReadOnlyRender) require('dbjs-file/client')(db, FormData, XMLHttpRequest,
 
 require('eregistrations/view/dbjs/form-section-to-dom');
 require('eregistrations/view/dbjs/form-section-group-to-dom');
+require('eregistrations/view/dbjs/form-entities-table-to-dom');
