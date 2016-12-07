@@ -3,3 +3,5 @@
 'use strict';
 
 module.exports = require('eregistrations/model/institution')(require('../../db'));
+
+require('./ministry-of-finance');
