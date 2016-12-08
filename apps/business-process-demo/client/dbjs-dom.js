@@ -23,6 +23,7 @@ db.StringLine.DOMInput.prototype.dbAttributes.inputMask = 'data-mask';
 if (!isReadOnlyRender) require('dbjs-file/client')(db, FormData, XMLHttpRequest, File, '/upload/');
 
 require('eregistrations/view/dbjs/form-section-to-dom');
+require('eregistrations/view/dbjs/form-section-group-to-dom');
 require('eregistrations/view/dbjs/requirement-upload-to-dom-form');
 
 domEnum(db.Country);
