@@ -41,7 +41,7 @@ var forEach           = require('es5-ext/object/for-each')
   , root = resolve(__dirname, '../..'), uploadsDir = resolve(root, 'uploads');
 
 module.exports = function () {
-	var app = connect(), env = require('../../env'), webmakeRoutes, cssRoutes
+	var app = connect(), env = require('../env'), webmakeRoutes, cssRoutes
 	  , appViewPaths = mano.appRoutes = create(null), uploadsMiddleware;
 
 	// Favicon

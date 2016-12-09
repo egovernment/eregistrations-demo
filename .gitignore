@@ -18,6 +18,7 @@ npm-debug.log
 /data-local
 /node_modules/dbjs-level
 /node_modules/dbjs-mongo
+/node_modules/dbjs-ms-sql
 /node_modules/level-party
 
 /node_modules/.bin

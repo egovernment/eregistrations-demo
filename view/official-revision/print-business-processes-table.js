@@ -1,9 +1,8 @@
 'use strict';
 
-var statusMap = require('../../apps/official-revision/business-processes/map')
-  , columns   = require('eregistrations/view/components/business-process-table-columns').columns;
-
-var getOrderIndex =
+var statusMap     = require('../../apps/official-revision/business-processes/map')
+  , columns       = require('../components/business-processes-table-columns')
+  , getOrderIndex =
 	require('../../apps/official-revision/business-processes/get-default-order-index');
 
 module.exports = exports = require('eregistrations/view/print-business-processes-table');

@@ -5,7 +5,7 @@
 var debug     = require('debug-ext')('setup')
   , writeFile = require('fs2/write-file')
   , resolve   = require('path').resolve
-  , env       = require('../env')
+  , env       = require('../server/env')
 
   , stringify = JSON.stringify
   , writeOpts = { intermediate: true }

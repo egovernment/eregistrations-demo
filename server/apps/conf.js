@@ -10,6 +10,7 @@ module.exports = {
 	"apps/official-front-desk": require("../../apps/official-front-desk/mano"),
 	"apps/official-processing": require("../../apps/official-processing/mano"),
 	"apps/official-revision": require("../../apps/official-revision/mano"),
+	"apps/official-social-security": require("../../apps/official-social-security/mano"),
 	"apps/public": require("../../apps/public/mano"),
 	"apps/user": require("../../apps/user/mano"),
 	"apps/users-admin": require("../../apps/users-admin/mano")

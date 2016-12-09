@@ -10,6 +10,7 @@ module.exports = [
 	"apps/official-front-desk",
 	"apps/official-processing",
 	"apps/official-revision",
+	"apps/official-social-security",
 	"apps/public",
 	"apps/user",
 	"apps/users-admin"

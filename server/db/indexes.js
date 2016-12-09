@@ -16,9 +16,16 @@ var forEach                    = require('es5-ext/object/for-each')
 
   , userAccounts = db.User.filterByKey('email').filterByKey('password')
   , visitableUsers = userAccounts.or(db.User.filterByKey('isDemo', true))
-  , managerClients = db.User.filterByKey('manager')
   , managers = userAccounts.filterByKey('roles', function (roles) { return roles.has('manager'); })
   , userStorage = driver.getStorage('user');
+
+var managerClients = db.User.filterByKey('manager', function (value) {
+	// Technically all users that has some 'manager' setting
+	// Stil in recompute process manager (as being other object) may not be loaded,
+	// in such case that property resolves to null
+	// If there's no manager setting at all it'll resolve to undefined
+	return value !== undefined;
+});
 
 // App resolution
 userStorage.indexKeyPath('appAccessId', visitableUsers).done();
@@ -35,18 +42,20 @@ userStorage.indexKeyPath('managerDataForms/progress',
 	managers.filterByKeyPath('managerDataForms/progress', 1)).done();
 userStorage.indexKeyPath('isManagerActive',
 	managers.filterByKey('isManagerActive', true)).done();
-userStorage.indexKeyPath('isManagerDesctructionBlocker', managerClients).done();
+userStorage.indexKeyPath('isManagerDestructionBlocker', managerClients).done();
 userStorage.indexKeyPath('canManagedUserBeDestroyed', managerClients).done();
-userStorage.indexKeyPath('canManagerBeDestroyed', managers).done();
+userStorage.indexKeyPath('canBeDestroyed', userAccounts).done();
 
 userStorage.indexKeyPath('searchString', userAccounts).done();
 
 forEach(businessProcessStorages, function (storage, name) {
 	// Needed for My Account
 	storage.indexKeyPath('status', businessProcesses[name]).done();
+	storage.indexKeyPath('registrations/requested', businessProcesses[name]).done();
 	storage.indexKeyPath('certificates/applicable', businessProcesses[name]).done();
 	// Needed for Part B search
-	storage.indexKeyPath('searchString', businessProcessesSubmitted[name]).done();
+	storage.indexKeyPath('searchString', businessProcesses[name]).done();
+	storage.indexKeyPath('submitterType', businessProcesses[name]).done();
 	// Needed for print forms generator
 	storage.indexKeyPath('dataForms/lastEditStamp', businessProcesses[name]).done();
 });

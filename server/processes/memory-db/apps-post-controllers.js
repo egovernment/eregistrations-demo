@@ -26,6 +26,10 @@ module.exports = {
 		require("../../../apps/official-processing/controller"),
 		require("../../../apps/official-processing/controller/server")
 	),
+	"apps/official-social-security": joinControllers(
+		require("../../../apps/official-social-security/controller"),
+		require("../../../apps/official-social-security/controller/server")
+	),
 	"apps/official-front-desk": joinControllers(
 		require("../../../apps/official-front-desk/controller"),
 		require("../../../apps/official-front-desk/controller/server")
