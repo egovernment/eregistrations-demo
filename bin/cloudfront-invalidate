@@ -8,7 +8,7 @@ require('eregistrations/server/utils/debug-conf');
 
 var root     = require('path').resolve(__dirname, '..')
   , appsList = require('../server/apps/list')
-  , env      = require('../env');
+  , env      = require('../server/env');
 
 if (!env.cloudfront) throw new Error("No cloudfront configuration provided in env.js");
 

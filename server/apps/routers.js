@@ -13,6 +13,8 @@ module.exports = {
 	'official-revision': new ControllerRouter(require('../../apps/official-revision/server/routes')),
 	'official-processing':
 		new ControllerRouter(require('../../apps/official-processing/server/routes')),
+	'official-social-security':
+		new ControllerRouter(require('../../apps/official-social-security/server/routes')),
 	'official-front-desk':
 		new ControllerRouter(require('../../apps/official-front-desk/server/routes')),
 	user: new ControllerRouter(require('../../apps/user/server/routes')),

@@ -5,7 +5,7 @@ var path      = require('path')
   , debug     = require('debug-ext')('start-service')
   , mano      = require('mano')
   , DbjsEvent = require('dbjs/_setup/event')
-  , env       = require('../../../env')
+  , env       = require('../../env')
 
   , resolve = path.resolve
   , root = resolve(__dirname, '../../..')
@@ -59,6 +59,10 @@ dbService().done(function () {
 
 	debug('compute processing times');
 	require('eregistrations/server/services/compute-processing-time')(driver,
+		require('../../../apps-common/processing-steps/meta'));
+
+	debug('copy isReady');
+	require('eregistrations/server/services/copy-is-ready')(driver,
 		require('../../../apps-common/processing-steps/meta'));
 
 	// Configure & start server

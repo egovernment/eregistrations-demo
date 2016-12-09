@@ -10,7 +10,7 @@ require('eregistrations/server/utils/debug-conf');
 var resolve      = require('path').resolve
   , initDriver   = require('eregistrations/server/utils/init-driver')
   , recompute    = require('eregistrations/server/scripts/db-recompute')
-  , env          = require('../env')
+  , env          = require('../server/env')
   , storageNames = require('../server/services/db/storage-names')
 
   , root = resolve(__dirname, '..'), slavePath = resolve(__dirname, 'db-recompute-slave');
@@ -33,5 +33,8 @@ require('eregistrations/server/business-process-data-forms-print').filenameReset
 var computeManagerSizes = require('eregistrations/server/services/compute-manager-relations-sizes');
 
 computeManagerSizes(driver)(function () { return driver.onDrain; })(function () {
-	return recompute(driver, slavePath)(driver.close.bind(driver));
+	return recompute(driver, slavePath, {
+		processingStepsMeta: require('../apps-common/processing-steps/meta'),
+		initialData: driver.getStorage('object').getObject('globalPrimitives')
+	})(driver.close.bind(driver));
 }).done();
