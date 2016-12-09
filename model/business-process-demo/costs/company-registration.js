@@ -18,6 +18,6 @@ BusinessProcessDemo.prototype.costs.map.companyRegistration.setProperties({
 		  , isLocalInvestment = businessProcess._get ?
 				_observe(businessProcess._isLocalInvestment) : businessProcess.isLocalInvestment;
 
-		return Math.max(Math.ceil((assets || 0) * (isLocalInvestment ? 0.01 : 0.02), 25));
+		return Math.max(Math.ceil((assets || 0) * (isLocalInvestment ? 0.01 : 0.02)), 25);
 	}
 });
