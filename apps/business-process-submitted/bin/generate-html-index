@@ -13,5 +13,5 @@ var resolve  = require('path').resolve
 generate(
 	resolve(__dirname, '../index.html.tpl'),
 	resolve(__dirname, '../', require('../mano').viewPath, 'index.html'),
-	require('../../../env')
+	require('../../../server/env')
 ).done();
