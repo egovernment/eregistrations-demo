@@ -7,7 +7,7 @@ Error.stackTraceLimit = Infinity;
 require('fs2/descriptors-handler')();
 require('eregistrations/server/utils/debug-conf');
 
-var env = require('../env');
+var env = require('../server/env');
 require('../i18n');
 var db = require('../db');
 

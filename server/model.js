@@ -9,6 +9,7 @@ require('dbjs-ext/string/string-line/password')(db);
 require('../model/user/roles');
 require('../model/user/recently-visited/business-processes');
 require('../model/institutions');
+require('../model/global-primitives');
 
 require('../model/business-process-demo');
 

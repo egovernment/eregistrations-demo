@@ -12,7 +12,7 @@ var copy             = require('es5-ext/object/copy')
   , mano             = require('mano')
   , archiver         = require('eregistrations/server/business-process-files-archiver')
   , documentArchiver = require('eregistrations/server/business-process-document-files-archiver')
-  , env              = require('../../../env')
+  , env              = require('../../env')
   , postListener     = require('mano/server/post-slave')
   , appsConf         = require('../../apps/conf')
 
