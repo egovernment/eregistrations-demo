@@ -54,7 +54,8 @@ forEach(businessProcessStorages, function (storage, name) {
 	storage.indexKeyPath('registrations/requested', businessProcesses[name]).done();
 	storage.indexKeyPath('certificates/applicable', businessProcesses[name]).done();
 	// Needed for Part B search
-	storage.indexKeyPath('searchString', businessProcessesSubmitted[name]).done();
+	storage.indexKeyPath('searchString', businessProcesses[name]).done();
+	storage.indexKeyPath('submitterType', businessProcesses[name]).done();
 	// Needed for print forms generator
 	storage.indexKeyPath('dataForms/lastEditStamp', businessProcesses[name]).done();
 });
