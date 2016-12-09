@@ -1,20 +1,13 @@
 'use strict';
 
-var from        = require('es5-ext/array/from')
-  , getTable    = require('eregistrations/view/components/business-processes-table')
-  , tableCols   = require('eregistrations/view/components/business-process-table-columns')
+var getTable    = require('eregistrations/view/components/business-processes-table')
+  , columns     = require('../components/business-processes-table-columns')
   , statusMap   = require('../../apps/official-front-desk/business-processes/map')
   , env         = require('../../apps-common/client/env')
-
-  , columns       = from(tableCols.columns);
-
-var getOrderIdx =
+  , getOrderIdx =
 	require('../../apps/official-front-desk/business-processes/get-default-order-index');
 
 module.exports = exports = require('eregistrations/view/business-processes-table');
-
-columns.push(tableCols.archiverColumn);
-columns.push(tableCols.goToColumn);
 
 exports._statusMap = function () {
 	return statusMap;

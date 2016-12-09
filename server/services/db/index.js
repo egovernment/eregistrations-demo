@@ -4,7 +4,7 @@ var resolve       = require('path').resolve
   , debug         = require('debug-ext')('start-service')
   , FragmentGroup = require('data-fragment/group')
   , service       = require('eregistrations/server/services/db')
-  , env           = require('../../../env')
+  , env           = require('../../env')
   , db            = require('../../../db')
   , queryMemoryDb = require('../../processes/master/query-memory-db')
   , storageNames  = require('./storage-names')
@@ -23,6 +23,10 @@ module.exports = function () {
 			  , driver = require('mano').dbDriver
 			  , fragment = new FragmentGroup();
 
+			var getObjectFragments =
+				require('eregistrations/server/data-fragments/get-direct-object-fragments');
+			fragment.addFragment(getObjectFragments(require('mano')
+				.dbDriver.getStorage('object'))('globalPrimitives'));
 			fragment.addFragment(getOfficialsFragment(db, driver.getStorage('user')));
 			return fragment;
 		},

@@ -23,7 +23,7 @@ var assign                  = require('es5-ext/object/assign')
 var trackerOptions = {
 	userStorage: userStorage,
 	reducedStorage: reducedStorage,
-	itemsPerPage: require('../../env').objectsListItemsPerPage
+	itemsPerPage: require('../env').objectsListItemsPerPage
 };
 
 module.exports = memoize(function (viewPath) {

@@ -2,6 +2,6 @@
 
 'use strict';
 
-require('../env');
+require('../server/env');
 
 require('eregistrations/scripts/ipc-eval')(process.argv[2]);

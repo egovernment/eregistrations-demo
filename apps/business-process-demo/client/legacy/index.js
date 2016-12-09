@@ -8,6 +8,7 @@ require('mano-legacy/ie8-font-visibility-fix');
 window.$ = require('mano-legacy');
 $.legacyDb = require('./business-process-demo-legacy-proto');
 
+require('mano-legacy/element#/class');
 require('mano-legacy/live/input-mask');
 require('eregistrations/client/legacy/refresh-guide');
 require('eregistrations/client/legacy/date-controls');
