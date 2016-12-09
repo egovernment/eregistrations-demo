@@ -14,6 +14,11 @@ BusinessProcessDemo.prototype.registrations.map.certificateOfIncentives.setPrope
 
 		return assets >= 5000;
 	},
+	costs: function (_observe) {
+		return [
+			this.master.costs.map.certificateOfIncentives
+		];
+	},
 	requirements: function () {
 		var requirementsMap = this.master.requirements.map;
 		return [requirementsMap.companyRegistration, requirementsMap.businessPlan];

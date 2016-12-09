@@ -16,7 +16,7 @@ var publicRoutes = joinControllers(
 );
 
 var nonPublicGlobalRoutes = copy(globalRoutes);
-globalRoutes.login = publicRoutes.login;
+nonPublicGlobalRoutes.login = publicRoutes.login;
 
 var joinOptions = { extendedOnly: true, globalRoutes: nonPublicGlobalRoutes };
 
@@ -43,6 +43,11 @@ module.exports = {
 	),
 	"apps/official-processing": joinControllers(
 		require("../../../apps/official-processing/controller"),
+		null,
+		joinOptions
+	),
+	"apps/official-social-security": joinControllers(
+		require("../../../apps/official-social-security/controller"),
 		null,
 		joinOptions
 	),
