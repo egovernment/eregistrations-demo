@@ -16,8 +16,10 @@ BusinessProcessDemo.prototype.dataForms.map.attorney.setProperties({
 	label: _("Attorney"),
 	actionUrl: 'attorney',
 	isApplicable: function (_observe) {
-		return _observe(this.master.registrations.requested)
+		var hasCertificateOfIncentives = _observe(this.master.registrations.requested)
 			.has(this.master.registrations.map.certificateOfIncentives);
+		if (!hasCertificateOfIncentives) return;
+		return _observe(this.master._assets) > 100000;
 	},
 	propertyNames: ['attorney/firstName', 'attorney/lastName', 'attorney/email']
 });
