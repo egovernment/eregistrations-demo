@@ -13,7 +13,8 @@ BusinessProcessDemo.prototype.dataForms.map.define('companyInformation', {
 BusinessProcessDemo.prototype.dataForms.map.companyInformation.setProperties({
 	label: _("Company Information"),
 	actionUrl: 'company-information',
-	propertyNames: ['businessName', 'address/country', 'address/city', 'address/street']
+	propertyNames: ['businessName', 'expectedIncome',
+		'address/country', 'address/city', 'address/street']
 });
 
 module.exports = BusinessProcessDemo;
