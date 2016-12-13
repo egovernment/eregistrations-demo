@@ -7,7 +7,21 @@ var db                  = require('../../db')
   , UsDollar            = require('dbjs-ext/number/currency/us-dollar')(db)
   , UInteger            = require('dbjs-ext/number/integer/u-integer')(db)
   , Address             = require('../lib/address')
+  , StringLine          = require('dbjs-ext/string/string-line')(db)
   , BusinessProcessDemo = module.exports = require('./base');
+
+require('eregistrations/model/business-process-new/representative')(db);
+
+BusinessProcessDemo.prototype.representative.defineProperties({
+	idNumber: {
+		type: StringLine,
+		label: _("Identification number"),
+		inputHint: _("The required format is: 0000-0000-AA"),
+		required: true,
+		pattern: new RegExp('[0-9]{4}-[0-9]{3}-[A-Z]{2}'),
+		inputPlaceholder: '8888-888-AA'
+	}
+});
 
 BusinessProcessDemo.prototype.getOwnDescriptor('businessName').required = true;
 
