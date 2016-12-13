@@ -12,6 +12,14 @@ var db                  = require('../../db')
 BusinessProcessDemo.prototype.getOwnDescriptor('businessName').required = true;
 
 BusinessProcessDemo.prototype.defineProperties({
+	expectedIncome: {
+		type: UsDollar,
+		label: _("Expected income"),
+		step: 1,
+		required: true,
+		min: 0,
+		inputHint: _("If your organization is non-profit, put ‘0’")
+	},
 	assets: {
 		type: UsDollar,
 		label: _("Assets"),
