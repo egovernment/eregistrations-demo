@@ -22,7 +22,7 @@ module.exports = meta = Object.defineProperties({
 		label: _("Approved"),
 		order: 2
 	}
-}, { _services: d(['finalTest']) });
+}, { _services: d(['finalTest', 'demo']) });
 
 forEach(meta, function (conf, name) {
 	if (name === 'all') {
