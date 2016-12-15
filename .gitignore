@@ -23,9 +23,9 @@ npm-debug.log
 
 /node_modules/.bin
 /node_modules/bcrypt/build
-/node_modules/html-pdf/node_modules/phantomjs/lib/location.js
-/node_modules/html-pdf/node_modules/phantomjs/lib/phantom
-/node_modules/html-pdf/node_modules/phantomjs/tmp
+/node_modules/html-pdf/node_modules/phantomjs-prebuilt/lib/location.js
+/node_modules/html-pdf/node_modules/phantomjs-prebuilt/lib/phantom
+/node_modules/html-pdf/node_modules/phantomjs-prebuilt/tmp
 /node_modules/invalidatejs/node_modules/libxml-to-js/node_modules/libxmljs/build
 /node_modules/jsdom/node_modules/contextify/build
 /node_modules/mongodb/node_modules/bson/builderror.log
