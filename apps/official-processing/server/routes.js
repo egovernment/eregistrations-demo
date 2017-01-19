@@ -9,6 +9,4 @@ module.exports = require('eregistrations/server/routes/official')({
 	listComputedProperties: require('../../../apps-common/business-process-list-computed-properties'),
 	itemsPerPage: require('../../../server/env').objectsListItemsPerPage,
 	statusIndexName: 'processingSteps/map/processing/status'
-}, {
-	processingStepsMeta: require('../../../apps-common/processing-steps')
 });

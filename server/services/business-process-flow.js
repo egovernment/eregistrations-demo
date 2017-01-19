@@ -3,7 +3,7 @@
 var includes            = require('es5-ext/array/#/contains')
   , initialize          = require('eregistrations/server/services/business-process-flow')
   , db                  = require('../../db')
-  , processingStepsMeta = require('../../apps-common/processing-steps/meta');
+  , processingStepsMeta = require('../../processing-steps-meta/meta');
 
 initialize(
 	db.BusinessProcessDemo,

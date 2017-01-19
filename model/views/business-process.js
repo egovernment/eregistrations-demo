@@ -2,7 +2,7 @@
 
 var forEach                    = require('es5-ext/object/for-each')
   , db                         = require('../../db')
-  , processingStepsMeta        = require('../../apps-common/processing-steps/meta')
+  , processingStepsMeta        = require('../../processing-steps-meta/meta')
   , BusinessProcessesSnapshots = db.Object.extend('BusinessProcessesSnapshots');
 
 module.exports = require('./base').defineProperties({

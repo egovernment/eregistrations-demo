@@ -34,7 +34,6 @@ var computeManagerSizes = require('eregistrations/server/services/compute-manage
 
 computeManagerSizes(driver)(function () { return driver.onDrain; })(function () {
 	return recompute(driver, slavePath, {
-		processingStepsMeta: require('../apps-common/processing-steps/meta'),
 		initialData: driver.getStorage('object').getObject('globalPrimitives')
 	})(driver.close.bind(driver));
 }).done();

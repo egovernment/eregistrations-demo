@@ -9,7 +9,7 @@ var forEach                    = require('es5-ext/object/for-each')
   , db                         = require('../../db')
   , businessProcesses          = require('../../apps-common/business-processes')
   , businessProcessesSubmitted = require('../../apps-common/business-processes/submitted')
-  , processingSteps            = require('../../apps-common/processing-steps')
+  , processingSteps            = require('../../processing-steps-meta/index')
   , businessProcessStorages    = require('../business-process-storages')
 
   , driver = mano.dbDriver
