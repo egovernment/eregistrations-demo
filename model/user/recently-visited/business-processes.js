@@ -6,7 +6,7 @@
 
 var forEach             = require('es5-ext/object/for-each')
   , db                  = require('../../../db')
-  , processingStepsMeta = require('../../../apps-common/processing-steps/meta');
+  , processingStepsMeta = require('../../../processing-steps-meta/meta');
 
 module.exports = require('eregistrations/model/user/recently-visited/business-processes')(db);
 

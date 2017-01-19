@@ -59,11 +59,11 @@ dbService().done(function () {
 
 	debug('compute processing times');
 	require('eregistrations/server/services/compute-processing-time')(driver,
-		require('../../../apps-common/processing-steps/meta'));
+		require('../../../processing-steps-meta/meta'));
 
 	debug('copy isReady');
 	require('eregistrations/server/services/copy-is-ready')(driver,
-		require('../../../apps-common/processing-steps/meta'));
+		require('../../../processing-steps-meta/meta'));
 
 	// Configure & start server
 	if (isNaN(env.port)) port = 80;

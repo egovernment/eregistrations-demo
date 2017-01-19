@@ -12,7 +12,7 @@ var assign                  = require('es5-ext/object/assign')
   , trackFirstPage          = require('eregistrations/server/view-tracker/first-page')
   , trackStep               = require('eregistrations/server/view-tracker/processing-step')
   , driver                  = require('mano').dbDriver
-  , processingStepsMeta     = require('../../apps-common/processing-steps/meta')
+  , processingStepsMeta     = require('../../processing-steps-meta/meta')
   , businessProcessStorages = require('../business-process-storages')
 
   , stringify = JSON.stringify
