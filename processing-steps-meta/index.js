@@ -1,6 +1,9 @@
 'use strict';
 
-module.exports = require('./meta');
+var assign          = require('es5-ext/object/assign')
+  , processingSteps = require('eregistrations/processing-steps-meta');
+
+module.exports = assign(processingSteps, require('./meta'));
 
 require('../apps/official-revision/business-processes/map');
 require('../apps/official-processing/business-processes/map');
