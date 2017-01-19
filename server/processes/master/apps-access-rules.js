@@ -4,7 +4,7 @@ var aFrom               = require('es5-ext/array/from')
   , configure           = require('eregistrations/server/configure-apps-access-rules')
   , mano                = require('mano')
   , db                  = require('../../../db')
-  , processingStepsMeta = require('../../../apps-common/processing-steps/meta')
+  , processingStepsMeta = require('../../../processing-steps-meta/meta')
   , FragmentGroup       = require('data-fragment/group')
   , getRecordsFragment     = require('eregistrations/server/data-fragments/get-records-fragment')
 

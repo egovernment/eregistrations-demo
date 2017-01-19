@@ -10,5 +10,5 @@ module.exports = require('eregistrations/server/routes/official')({
 	itemsPerPage: require('../../../server/env').objectsListItemsPerPage,
 	statusIndexName: 'processingSteps/map/revision/status'
 }, {
-	processingStepsMeta: require('../../../apps-common/processing-steps')
+	processingStepsMeta: require('../../../processing-steps-meta/index')
 });
