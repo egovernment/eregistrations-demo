@@ -9,6 +9,6 @@ window.$ = require('mano-legacy');
 
 require('mano-legacy/element#/class');
 require('mano-legacy/select-match');
-
+require('eregistrations/client/legacy/form-section-state-helper');
 require('mano-legacy/element#/event');
 require('domjs-ext/post-button.legacy');
